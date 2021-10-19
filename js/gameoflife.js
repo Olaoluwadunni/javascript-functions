@@ -1,10 +1,11 @@
 function seed(a,b,c) {
-  let args = [...arguments];
-  console.log(args);
+  // let args = [...arguments];
+  // console.log(args);
+  return Array.prototype.slice.call(arguments);
 }
 
 function same([x, y], [j, k]) {
-  return x === y && j === k
+  return x === y && j === k;
 }
 
 
@@ -24,7 +25,7 @@ const corners = (state = []) => {
     bottomLeft: [0,0]
   };
 }
-  const horizonal = (state.map(([x, _]) => x);
+  const horizonal = state.map(([x, _]) => x);
   const vertical = state.map(([_, y]) => y);
   return {
     topRight: [Math.max(...horizonal), Math.max(...vertical)],
