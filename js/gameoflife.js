@@ -5,7 +5,7 @@ function seed(a,b,c) {
 }
 
 function same([x, y], [j, k]) {
-  return x === y && j === k;
+  return x === j && y === k;
 }
 
 
